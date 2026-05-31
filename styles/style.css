@@ -17,6 +17,8 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -50,10 +52,9 @@ ol {
 
 .content {
   display: flex;
-  margin: auto;
   align-items: flex-end;
   gap: 30px;
-  width: 100%;
+  width: 1140px;
 }
 
 .result {
@@ -64,26 +65,32 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 40px;
 }
 
 .content__details {
-  flex: 1;
-  height: 100%;
-
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 26px;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .content__list-container {
   height: 298px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
 }
 
 .result__video-container {
   inline-size: 711px;
   block-size: 386px;
   margin-block-end: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -93,12 +100,6 @@ ol {
 }
 
 .content__list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.content__list-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -121,10 +122,10 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1;
   color: #fff;
   margin-bottom: 5px;
 }
@@ -134,7 +135,6 @@ ol {
   font-weight: 700;
   font-size: 75px;
   line-height: 0.94;
-
   color: #fff;
   text-transform: uppercase;
 }
@@ -155,41 +155,25 @@ ol {
   line-height: 1;
   color: #fff;
   text-transform: uppercase;
-
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: 192px;
 }
 
 .content__video-card-description {
-  font-family: "Oswald", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
   color: #fff;
-
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
   white-space: nowrap;
-}
-
-.search-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  overflow: hidden;
+  max-width: 192px;
 }
 
 .search-form__checkbox-list {
@@ -213,7 +197,7 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   width: fit-content;
   cursor: pointer;
 }
@@ -223,14 +207,6 @@ ol {
   font-weight: 400;
   font-size: 18px;
   color: #fff;
-}
-
-.search-form__label {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  gap: 8px;
-  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -245,13 +221,11 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
-
   outline: none;
-  cursor: pointer;
 }
 
 .search-form__textfield::placeholder {
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -320,7 +294,6 @@ ol {
 
 .button:active {
   color: #545050;
-  border-color: #545050;
 }
 
 .search-form__submit-button {
@@ -367,27 +340,6 @@ ol {
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 0px;
-}
-
-.result__video-container {
-  position: relative;
-}
-
-.content__list-container {
-  position: relative;
-}
-
-.preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(27, 25, 25, 0.8);
-  z-index: 10;
 }
 
 /* Кастомный скроллбар */
